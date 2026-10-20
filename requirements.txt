@@ -1,0 +1,14 @@
+numpy
+pandas
+scikit-learn
+torch
+networkx
+pyyaml
+matplotlib
+scipy
+tqdm
+# Optional, added in later phases
+# opacus
+# flwr
+# transformers
+# bitsandbytes

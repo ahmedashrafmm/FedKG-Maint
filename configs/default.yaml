@@ -1,0 +1,22 @@
+data:
+  root: data/raw/CMAPSS        # folder with train_FD00X.txt, test_FD00X.txt, RUL_FD00X.txt
+  clients: [FD001, FD002, FD003, FD004]
+  holdout: FD004               # never used for training
+  window: 30
+  rul_cap: 125
+model:
+  hidden: 64
+  layers: 2
+  dropout: 0.2
+federated:
+  strategy: fedavg             # fedavg | fedprox
+  rounds: 30
+  local_epochs: 2
+  lr: 0.001
+  batch_size: 128
+  mu: 0.01                     # FedProx proximal weight
+privacy:
+  enabled: false
+  clip_norm: 1.0
+  noise_multiplier: 0.5
+seed: 42
